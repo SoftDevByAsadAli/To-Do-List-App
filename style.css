@@ -1,0 +1,149 @@
+/* ====== GLOBAL RESET ====== */
+/* Removes default spacing so all browsers match */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* width includes padding and border */
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* A soft purple gradient background */
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+  padding: 20px;
+}
+
+/* ====== MAIN CONTAINER ====== */
+.container {
+  background: #fff;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #4834d4;
+  margin-bottom: 25px;
+}
+
+/* ====== INPUT AREA ====== */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  flex: 1;                 /* takes all remaining space */
+  padding: 12px 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* Highlight the input when clicked */
+#taskInput:focus {
+  outline: none;
+  border-color: #6c5ce7;
+}
+
+#addBtn {
+  padding: 12px 20px;
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addBtn:hover {
+  background: #4834d4;
+}
+
+/* ====== TASK LIST ====== */
+ul {
+  list-style: none;        /* removes bullet points */
+  margin-bottom: 20px;
+}
+
+/* Each task row */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f7f7;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+li:hover {
+  background: #efeefe;
+  transform: translateX(5px);  /* slides right a little */
+}
+
+/* The task text (clicking it toggles complete) */
+.task-text {
+  flex: 1;
+  cursor: pointer;
+  color: #333;
+}
+
+/* When a task is completed, this class crosses it out */
+.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* The small delete button on each task */
+.delete-btn {
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;      /* makes it a circle */
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #ee5253;
+  transform: scale(1.1);
+}
+
+/* ====== CLEAR ALL BUTTON ====== */
+.clear-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4834d4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clear-btn:hover {
+  background: #3621a8;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+}
