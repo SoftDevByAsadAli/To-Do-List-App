@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page responsive on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- This box holds the whole app and is centered on screen -->
+  <div class="container">
+
+    <h1>📝 My To-Do List</h1>
+
+    <!-- ====== INPUT AREA ====== -->
+    <!-- Where the user types a new task -->
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Add a new task...">
+      <button id="addBtn">Add</button>
+    </div>
+
+    <!-- ====== TASK LIST ====== -->
+    <!-- JavaScript will fill this list with tasks -->
+    <ul id="taskList"></ul>
+
+    <!-- ====== CLEAR ALL BUTTON ====== -->
+    <button id="clearBtn" class="clear-btn">Clear All</button>
+
+  </div>
+
+  <!-- Link to our JavaScript file (placed at the end so the page loads first) -->
+  <script src="script.js"></script>
+</body>
+</html>
